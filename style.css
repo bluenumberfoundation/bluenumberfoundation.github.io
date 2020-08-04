@@ -37,3 +37,10 @@ margin-bottom: 0;
 .myNav a:hover{
 color: #ffb74d;
 }
+
+.projectTitle {
+    color: #1c1e22;
+    font-size: 250%;
+    line-height: 1em;
+    font-weight: 600;
+}
