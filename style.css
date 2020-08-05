@@ -44,3 +44,16 @@ color: #ffb74d;
     line-height: 1em;
     font-weight: 600;
 }
+
+.projectSubTitle {
+    color: #1c1e22;
+    font-size: 200%;
+    line-height: 1em;
+    font-weight: 450;
+}
+
+.themeColor {
+    background-color: #023b60;
+    color: white;
+    border-radius: 5px;
+}
