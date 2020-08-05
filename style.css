@@ -35,7 +35,7 @@ margin-bottom: 0;
 
 
 .myNav a:hover{
-color: #ffb74d;
+color: #84a3b9;
 }
 
 .projectTitle {
@@ -47,8 +47,8 @@ color: #ffb74d;
 
 .projectSubTitle {
     color: #1c1e22;
-    font-size: 200%;
-    line-height: 1em;
+    font-size: 150%;
+    line-height: 1.4em;
     font-weight: 450;
 }
 
@@ -56,4 +56,9 @@ color: #ffb74d;
     background-color: #023b60;
     color: white;
     border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #023b60 !important;
+    color: white !important;
 }
