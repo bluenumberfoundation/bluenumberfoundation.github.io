@@ -86,3 +86,24 @@ i {
 ul li a {
     color: #212529;
 }
+
+
+#header {
+    text-align: center;
+    background: #023B60;
+    color: #fff;
+}
+
+#header h2 {
+    border-left: dotted 1px #fff;
+    border-right: dotted 1px #fff;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.caption {
+    padding: 0.8rem;
+    text-align: justify;
+    line-height: 1.7em;
+}
