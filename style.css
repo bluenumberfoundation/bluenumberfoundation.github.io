@@ -13,6 +13,11 @@ a:hover {
   color: #fff;
 }
 
+
+.nav-wrapper {
+    background: #f7f7f7 !important;
+}
+
 .footer {
 display: flex;
 justify-content: center;
@@ -35,7 +40,7 @@ margin-bottom: 0;
 
 
 .myNav a:hover{
-color: #84a3b9;
+color: #023B60;
 }
 
 .projectTitle {
@@ -76,4 +81,8 @@ i {
 .main-desc {
     font-size: 140%;  
     font-weight: 500; 
+}
+
+ul li a {
+    color: #212529;
 }
