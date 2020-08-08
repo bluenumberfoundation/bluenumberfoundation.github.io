@@ -51,7 +51,7 @@ color: #023B60;
 }
 
 .projectSubTitle {
-    color: #1c1e22;
+    color: #023b60;
     font-size: 150%;
     line-height: 1.4em;
     font-weight: 500;
@@ -78,10 +78,7 @@ i {
     font-weight: 500; 
 }
 
-.main-desc {
-    font-size: 140%;  
-    font-weight: 500; 
-}
+
 
 ul li a {
     color: #212529;
