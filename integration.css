@@ -31,6 +31,9 @@ code{
     line-height: 1.6em;
 }
 
+a:hover {
+    color: #4bacc6;
+}
   
   .sidebar {
     position: fixed;
