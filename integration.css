@@ -11,6 +11,12 @@ header {
     padding-top: 4em;
 }
 
+#title {
+    font-weight: 500;
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
 hr {
     margin-top: 5em;
 }
