@@ -4,15 +4,21 @@
     vertical-align: text-bottom;
   }
   
-  /*
-   * Sidebar
-   */
+header {
+    font-weight: 500;
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    padding-top: 4em;
+}
+
+hr {
+    margin-top: 5em;
+}
   
   .sidebar {
     position: fixed;
     top: 0;
     bottom: 0;
-    /* left: 0; */
     padding-right: 0;
     padding-left: 0;
   }
@@ -89,11 +95,7 @@
     transform: translate3d(-280px, 0, 0);
   }
   
-  .main {
-    flex: 0 0 auto;
-    transition-duration: 1s;
-  }
-  
+
   .sidebar.is-close ~ .main {
     flex-grow: 1;
     width: 100%;
