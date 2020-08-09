@@ -23,7 +23,7 @@ hr {
 
 code{
     background: #eee;
-    color: #4bacc6;
+    color: #039be5;
 	display: block;
 	padding: 2rem;
 	border-radius: .5rem;
@@ -69,10 +69,7 @@ a:hover {
     margin-right: 4px;
     color: #999;
   }
-  
-  .sidebar .nav-link.active {
-    color: #4bacc6;
-  }
+
   
   .sidebar .nav-link:hover .feather,
   .sidebar .nav-link.active .feather {
