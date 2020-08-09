@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="./style.css">
-    
+    <link rel="stylesheet" href="./integration.css">
     <title>HumanID</title>  
   
 </head>
@@ -43,20 +43,166 @@
 
  
   
-              <div class="container">
-                
-                  <div class="row">
-                      <div class="col-md-12"> 
-                        Integration
-                  </div>
-              </div> 
+        <div class="container"> 
+          <div class="row">
+            <nav id="sidebar" class="col-md-2 d-block bg-light sidebar">
+              <div class="sidebar-sticky">
+                <div class="sidebar-content">
+                  <form class="form">
+                    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+                  </form>
+        
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">
+                        <span data-feather="home"></span>
+                        Integration <span class="sr-only">(current)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#first_section">
+                        <span data-feather="file"></span>
+                        Requirements
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#second_section">
+                        <span data-feather="shopping-cart"></span>
+                        Built with
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#third_section">
+                        <span data-feather="users"></span>
+                        Installation
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#fourth_section">
+                        <span data-feather="bar-chart-2"></span>
+                        Get the credentials access
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#fifth_section">
+                        <span data-feather="layers"></span>
+                        Configuration
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sixth_section">
+                        <span data-feather="layers"></span>
+                        How do I use iOS SDK
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#seventh_section">
+                        <span data-feather="layers"></span>
+                        License
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+        
+            <main id="main" class="col-md-10">
+
+              <div id="title">
+                <header>Integration</header>
+                To receive the needed credentials to integrate humanID login into your own applications, please email developers@human-id.org. Once you receive your credentials, follow the instructions on our README page to finish integration.
+              </div>
+              <hr>
+              <section class="main-section" id="first_section">
+              <header>Requirements</header>
+         
+                  <li>Xcode 11.4+</li>
+                  <li>Swift 5.0</li>
+                  <li>iOS 11.0+</li>
+                  <li>Clean Swift VIP architecture</li>
+             
+              </section>
+              <hr>
+              <section class="main-section" id="second_section">
+              <header>Built with</header>
+              <li>Swinject - Dependency injection framework for Swift with iOS/macOS/Linux</li>
+              <li>RxSwift - Reactive Programming in Swift</li>
+              <li>RxAlamofire - RxSwift wrapper around the elegant HTTP networking in Swift Alamofire</li>
+              <li>FlagPhoneNumber - A formatted phone number UITextField with country flag picker</li>
+              <li>VKPinCodeView - VKPinCodeView is simple and elegant UI component for input PIN. You can easily customise appearance and get auto fill (OTP) iOS 12 feature right from the box</li>
+              <li>IQKeyboardManager - Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more</li>
+              <li>PodAsset - Unable to find cocoapods resources? Here is the solution!</li>
+              </section>
+              <hr>
+                    <section class="main-section" id="third_section">
+              <header>Installation</header>
+                HumanIDSDK is available through CocoaPods.
+                  To install it, simply add the following line to your Podfile:<br/><br/>
+                  <code>pod 'HumanIDSDK'</code>
+
+              </section>
+              <hr>
+                    <section class="main-section" id="fourth_section">
+              <header>Get the credentials access</header>
+              Get the clientId and clientSecret by dropping us an email developers@human-id.org
+              </section>
+              <hr>
+                    <section class="main-section" id="fifth_section">
+              <header>Configuration</header>
+              Add these codes into your <code>AppDelegate.swift</code> and make sure all value is fulfilled.
+                <code>import HumanIDSDK
+
+                  @UIApplicationMain
+                  class AppDelegate: UIResponder, UIApplicationDelegate {
+                  
+                    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+                       HumanIDSDK.shared.configure(clientID: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")
+                    }
+                  }</code>
+              </section>
+
+              <hr>
+              <section class="main-section" id="six_section">
+        <header>How do I use iOS SDK</header>
+        Add these codes into your ViewController file, we recommend you wrap this in a function that handles the login button.
+          <code>
+            import HumanIDSDK
+
+            class YourViewController: UIViewController {
+            
+              @IBAction func yourLoginAction(_ sender: Any) {
+                 HumanIDSDK.shared.requestOtp(view: self, name: "YOUR_APPLICATION_NAME", image: "YOUR_APPLICATION_LOGO")
+              }
+            }
+            
+            extension YourViewController: RequestOTPDelegate {
+            
+              func login(with token: String) {
+                 // TODO You can persist our token here.
+              }
+            }
+          </code>
+          <strong>You are set!</strong>
+          Now you can integrate your iOS app to humanID. See the full sample here to learn more.
+
+          Warning! To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.
+        </section>
+
+        <hr>
+        <section class="main-section" id="seventh_section">
+  <header>License</header>
+      Copyright 2019-2020 Bluenumber Foundation
+      Licensed under the GNU General Public License v3.0 (LICENSE)
+  
+  </section>     
+            </main>
+          </div>
+
         </div>
 
      
    
-        <div class="footer">
-          <p>&copy 2020 HumanID</p>
-        </div>
+
 
 
 
