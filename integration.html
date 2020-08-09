@@ -149,13 +149,13 @@
                     <section class="main-section" id="fifth_section">
               <header>Configuration</header>
               Add these codes into your <code>AppDelegate.swift</code> and make sure all value is fulfilled.
-                <code>import HumanIDSDK
+                <code>import HumanIDSDK<br/>
 
-                  @UIApplicationMain
-                  class AppDelegate: UIResponder, UIApplicationDelegate {
+                  @UIApplicationMain<br/>
+                  class AppDelegate: UIResponder, UIApplicationDelegate {<br/>
                   
-                    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-                       HumanIDSDK.shared.configure(clientID: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")
+                    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {<br/>
+                       HumanIDSDK.shared.configure(clientID: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")<br/>
                     }
                   }</code>
               </section>
@@ -165,19 +165,19 @@
         <header>How do I use iOS SDK</header>
         Add these codes into your ViewController file, we recommend you wrap this in a function that handles the login button.
           <code>
-            import HumanIDSDK
+            import HumanIDSDK<br/>
 
-            class YourViewController: UIViewController {
+            class YourViewController: UIViewController {<br/>
             
-              @IBAction func yourLoginAction(_ sender: Any) {
-                 HumanIDSDK.shared.requestOtp(view: self, name: "YOUR_APPLICATION_NAME", image: "YOUR_APPLICATION_LOGO")
+              @IBAction func yourLoginAction(_ sender: Any) {<br/>
+                 HumanIDSDK.shared.requestOtp(view: self, name: "YOUR_APPLICATION_NAME", image: "YOUR_APPLICATION_LOGO")<br/>
               }
             }
             
-            extension YourViewController: RequestOTPDelegate {
+            extension YourViewController: RequestOTPDelegate {<br/>
             
-              func login(with token: String) {
-                 // TODO You can persist our token here.
+              func login(with token: String) {<br/>
+                 // TODO You can persist our token here.<br/>
               }
             }
           </code>
