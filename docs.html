@@ -172,9 +172,44 @@ To generate database on Windows maybe you can run <code>setx NODE_ENV=DATABASE &
         <hr>
               <section class="main-section" id="third_section">
         <header>Configuration</header>
-        App configuration is read from config.json. You can reuse the provided example in config.json.example<br/>
-          Database<br/>
-          For DATABASE configuration, please refer to <a target="_blank" href="https://sequelize.org/master/manual/getting-started">Sequelize configuration</a>. Some common examples:
+        App configuration is read from config.json. You can reuse the provided example in config.json.example<br/><br/>
+          <b>Database</b><br/>
+          For DATABASE configuration, please refer to <a target="_blank" href="https://sequelize.org/master/manual/getting-started">Sequelize configuration</a>. Some common examples:<br/><br/>
+
+          <p class="text-muted">Sqlite3 file storage</p>
+          <code>
+            <pre>
+{
+"DATABASE": {
+  "username": "root",
+  "password": null,
+  "database": "humanid",
+  "dialect": "sqlite",
+  "storage": "db.sqlite"
+  },
+}</pre>
+          </code>
+
+          <p class="text-muted">MySQL with connection pooling</p>
+          <code>
+            <pre>
+{
+  "DATABASE": {
+    "username": "root",
+    "password": "root",
+    "database": "humanid",
+    "dialect": "mysql",
+    "pool": {
+       "max": 5,
+       "min": 0,
+       "acquire": 30000,
+       "idle": 10000
+        }    
+  },
+}</pre>
+          </code>
+
+          
 
         </section>
         <hr>
