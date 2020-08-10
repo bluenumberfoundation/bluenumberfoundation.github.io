@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./docs.css">
     
     <title>HumanID</title>  
   
@@ -24,7 +25,6 @@
           <ul class="right hide-on-med-and-down">
             <li class="myNav"><a href="index.html">Home</a></li>
             <li class="myNav"><a href="docs.html">Docs</a></li>
-            <li class="myNav"><a href="examples.html">Examples</a></li> 
             <li class="myNav"><a href="integration.html">Integration</a></li> 
             <li class="myNav"><a href="blog.html">Blog</a></li> 
             <li class="myNav"><a href="faq.html">FAQ</a></li> 
@@ -35,29 +35,210 @@
   <ul class="sidenav" id="mobile-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="docs.html">Docs</a></li>
-    <li><a href="examples.html">Examples</a></li> 
     <li><a href="integration.html">Integration</a></li> 
     <li><a href="blog.html">Blog</a></li> 
     <li><a href="faq.html">FAQ</a></li> 
   </ul>
 
  
+  <div class="container"> 
+    <div class="row">
+      <nav id="sidebar" class="col-md-2 d-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <div class="sidebar-content">
+            <form class="form">
+              <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+            </form>
   
-              <div class="container">
-                
-                  <div class="row">
-                      <div class="col-md-12"> 
-                        Docs
-
-                  </div>
-              </div> 
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <span data-feather="home"></span>
+                  humanID Core API <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#first_section">
+                  <span data-feather="file"></span>
+                  Prerequisites
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#second_section"> 
+                  <span data-feather="shopping-cart"></span>
+                  Setup
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#third_section">
+                  <span data-feather="users"></span>
+                  Configuration
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#fourth_section">
+                  <span data-feather="bar-chart-2"></span>
+                  Class/Entity Relationship Diagram
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#fifth_section">
+                  <span data-feather="layers"></span>
+                  Configuration
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sixth_section">
+                  <span data-feather="layers"></span>
+                  How do I use iOS SDK
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#seventh_section">
+                  <span data-feather="layers"></span>
+                  License
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+  
+      <main id="main" class="col-md-10">
+
+        <div>
+          <h6 id="title">humanID Core API</h6>
+          humanID API server. API doc and demo <a target="_blank" href="https://humanid.herokuapp.com">https://humanid.herokuapp.com</a><br/>
+
+          Details about humanID Web SDK can be found <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-api/blob/master/client/README.md">here</a><br/>
+          
+          Demo data:<br/><br/>
+          
+          Admin</br>
+          <code><pre>
+{
+  "email": "admin@local.host",
+  "password": "admin123"
+}</pre>
+          </code>
+          Apps<br/>
+          <code><pre>
+[{
+    "id": "DEMO_APP",
+    "secret": "2ee4300fd136ed6796a6a507de7c1f49aecd4a11663352fe54e54403c32bd6a0",
+    "platform": "ANDROID",
+  "serverKey": "AAAA....S4"    
+},
+{
+    "id": "DEMO_APP_IOS",
+    "secret": "541ec90bf636f0a8847885af37faedc258dcc875481f870d507c64d0e785bc1e",
+    "platform": "IOS",
+  "serverKey": null
+}]           
+</pre>
+          </code>
+          Users<br/>
+      <code>
+<pre>
+{
+  "countryCode": "62",
+  "phone": "81234567890",
+  "hash": [
+      "7a009b9c3203ac3ff081146137e658583d2d60cf867acdb49716b84f1603f8a4", // For DEMO_APP
+      "0c88468123e1c193a5f2e925d360266025f739f30ed0eeab7321887905f8c68c", // For DEMO_APP_IOS
+    ]
+}
+</pre>
+      </code>
+        </div>
+        <hr>
+        <section class="main-section" id="first_section">
+        <header>Prerequisites</header>
+            <li>Node.js >= 12 LTS</li>
+            <li>RDBMS (MySQL >= 14.14 or SQLite3 >= 3.22)</li>
+        </section>
+
+        <hr>
+        <section class="main-section" id="second_section">
+        <header>Setup</header>
+        <li>Install <code>nodejs >= 10.x.x</code></li>
+        <li>Clone repo & install dependencies <code>npm i</code></li>
+        <li>Run test <code>npm test</code></li>
+        <li>Generate database (drop & create) by running on Linux/MacOS<code>npm run db:refresh</code></li>
+        <li>Generate doc (requires apidoc <a target="_blank" href="http://apidocjs.com">http://apidocjs.com</a>)<code>npm run doc</code></li>
+        <li>Build client SDK (javascript) <code>npm run build</code></li>
+To generate database on Windows maybe you can run <code>setx NODE_ENV=DATABASE && npx sequelize db:drop && sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all</code> (UNTESTED)
+        </section>
+        <hr>
+              <section class="main-section" id="third_section">
+        <header>Configuration</header>
+        App configuration is read from config.json. You can reuse the provided example in config.json.example<br/>
+          Database<br/>
+          For DATABASE configuration, please refer to <a target="_blank" href="https://sequelize.org/master/manual/getting-started">Sequelize configuration</a>. Some common examples:
+
+        </section>
+        <hr>
+              <section class="main-section" id="fourth_section">
+        <header>Class/Entity Relationship Diagram</header>
+        Get the clientId and clientSecret by dropping us an email <br/><a href="mailto:developers@human-id.org">developers@human-id.org</a>
+        </section>
+        <hr>
+              <section class="main-section" id="fifth_section">
+        <header>Configuration</header>
+        Add these codes into your <code>AppDelegate.swift</code> and make sure all value is fulfilled.
+          <code>import HumanIDSDK<br/>
+
+            @UIApplicationMain<br/>
+            class AppDelegate: UIResponder, UIApplicationDelegate {<br/>
+            
+              func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {<br/>
+                 HumanIDSDK.shared.configure(clientID: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")<br/>
+              }
+            }</code>
+        </section>
+
+        <hr>
+        <section class="main-section" id="sixth_section">
+  <header>How do I use iOS SDK</header>
+  Add these codes into your ViewController file, we recommend you wrap this in a function that handles the login button.
+    <code>
+      import HumanIDSDK<br/>
+
+      class YourViewController: UIViewController {<br/>
+      
+        @IBAction func yourLoginAction(_ sender: Any) {<br/>
+           HumanIDSDK.shared.requestOtp(view: self, name: "YOUR_APPLICATION_NAME", image: "YOUR_APPLICATION_LOGO")<br/>
+        }
+      }
+      
+      extension YourViewController: RequestOTPDelegate {<br/>
+      
+        func login(with token: String) {<br/>
+           // TODO You can persist our token here.<br/>
+        }
+      }
+    </code>
+    <strong>You are set!</strong><br/>
+    Now you can integrate your iOS app to humanID. See the full <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/tree/master/Example">sample</a> here to learn more.
+
+    Warning! To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.
+  </section>
+
+  <hr>
+  <section class="main-section" id="seventh_section">
+<header>License</header>
+Copyright 2019-2020 Bluenumber Foundation
+Licensed under the GNU General Public License v3.0 <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/blob/master/LICENSE">(LICENSE)</a>
+
+</section>     
+      </main>
+    </div>
+
+  </div>
 
      
    
-        <div class="footer">
-          <p>&copy 2020 HumanID</p>
-        </div>
+
 
 
 
