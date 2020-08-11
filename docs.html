@@ -81,16 +81,16 @@
                   Class/Entity Relationship Diagram
                 </a>
               </li>
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="#fifth_section">
                   <span data-feather="layers"></span>
-                  Configuration
+                  Web Login Examples
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#sixth_section">
                   <span data-feather="layers"></span>
-                  How do I use iOS SDK
+                  Mobile API Recipes
                 </a>
               </li>
               <li class="nav-item">
@@ -98,7 +98,7 @@
                   <span data-feather="layers"></span>
                   License
                 </a>
-              </li> -->
+              </li>
             </ul>
           </div>
         </div>
@@ -244,46 +244,92 @@ To generate database on Windows maybe you can run <code>setx NODE_ENV=DATABASE &
         <img width="100%" src="https://cdn.glitch.com/c0dcb651-5b19-4756-a6e6-25b3982ca367%2Ferd.png?v=1597163286762" alt="ERD Diagram"/>
         </section>
 
-        <!-- <hr>
+        <hr>
               <section class="main-section" id="fifth_section">
-        <header>Configuration</header>
-        Add these codes into your <code>AppDelegate.swift</code> and make sure all value is fulfilled.
-          <code>import HumanIDSDK<br/>
+        <header>Web Login Examples</header>
+        Web login implementation example can be found in 
+        <code>http://localhost:3000/examples/login.html</code>
+        
+       
+        To simulate web login with push notification, follow these steps:
+       <ol> 
+       <li>Make sure Push Notification configuration above has been done</li>
+       <li>Open in a tab http://localhost:3000/examples/confirm.html and allow notification. Leave it open</li>
+       <li>Open in another tab http://localhost:3000/examples/login.html enter country code & phone number (demo data provided above) and click Login by App</li>
+       <li>Go to previous tab that points to http://localhost:3000/examples/confirm.html. A confirmation dialog should be shown. Click Confirm</li>
+       <li>Return to tab http://localhost:3000/examples/login.html. In less than 5 seconds, you should be redirected to http://localhost:3000/examples/secured.html</li>
+      </ol>
 
-            @UIApplicationMain<br/>
-            class AppDelegate: UIResponder, UIApplicationDelegate {<br/>
-            
-              func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {<br/>
-                 HumanIDSDK.shared.configure(clientID: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")<br/>
-              }
-            }</code>
-        </section>
+      <p class="text-muted">In the actual implementation, every actions in confirm.html can only be done from mobile device. Because it requires login hash which should be kept secret per user/app.</p>
+        
+      To simulate web login with OTP SMS, follow these steps:
+      <ol>
+        <li>Make sure SMS OTP/Verification above has been done, and you have register a valid phone number using POST /mobile/users/register</li>
+        <li>Open http://localhost:3000/examples/login.html enter country code & phone number (demo data provided above) and click Login by SMS</li>
+        <li>Wait for SMS containing OTP, enter it to the form, then click Verify & Login</li>
+        <li>You should be redirected to http://localhost:3000/examples/secured.html</li>
+      </ol>
+    
+    </section>
 
         <hr>
         <section class="main-section" id="sixth_section">
-  <header>How do I use iOS SDK</header>
-  Add these codes into your ViewController file, we recommend you wrap this in a function that handles the login button.
-    <code>
-      import HumanIDSDK<br/>
+  <header>Mobile API Recipes</header>
+  <b>Registration</b><br/>
+  Fresh login (no other partner app logged-in yet):
+  <ol>
+  <li>POST /mobile/users/verifyPhone Verify user phone number (request OTP SMS)</li>
+  <li>POST /mobile/users/register Register user. Get the hash from response and store safely in device</li>
+  </ol>
 
-      class YourViewController: UIViewController {<br/>
-      
-        @IBAction func yourLoginAction(_ sender: Any) {<br/>
-           HumanIDSDK.shared.requestOtp(view: self, name: "YOUR_APPLICATION_NAME", image: "YOUR_APPLICATION_LOGO")<br/>
-        }
-      }
-      
-      extension YourViewController: RequestOTPDelegate {<br/>
-      
-        func login(with token: String) {<br/>
-           // TODO You can persist our token here.<br/>
-        }
-      }
-    </code>
-    <strong>You are set!</strong><br/>
-    Now you can integrate your iOS app to humanID. See the full <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/tree/master/Example">sample</a> here to learn more.
+  <b>Login</b><br/>
+  Login when there is another existing partner app logged-in:
+  <ol>
+  <li>POST /mobile/users/login Login using existing partner app hash. Get the hash for the new app and store it safely</li>
+  </ol>
 
-    Warning! To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.
+  <b>Validation</b><br/>
+  Check if a hash is still valid:
+  <ol>
+  <li>GET /mobile/users/login Get login status</li>
+  </ol>
+
+  <b>Switch Device</b><br/>
+  Login from a new device (previously logged-in from different device):
+  <p class="text-muted">The same as new registration. Everything else is handled in server/backend</p>  
+  <ol>
+  <li>POST /mobile/users/verifyPhone Verify user phone number (request OTP SMS)</li>
+  <li>POST /mobile/users/register Register user. Get the hash from response and store safely in device</li>
+  </ol>
+
+
+  <b>Update phone</b><br/>
+  Update phone number from an logged-in app:
+  <p class="text-muted">The same as new registration. Everything else is handled in server/backend</p>  
+  <ol>
+  <li>POST /mobile/users/verifyPhone Verify user new phone number (request OTP SMS)</li>
+  <li>POST /mobile/users/updatePhone Update phone</li>
+  </ol>
+
+
+  <b>Web login confirmation</b><br/>
+  Confirm login request from web client:
+  <ol>
+  <li>PUT /mobile/users Update notification ID (get it from Firebase Cloud Messaging SDK)</li>
+  <li>POST /web/users/confirm Confirm (after receiving push notification)</li>
+  <li>POST /web/users/reject Or reject</li>
+  </ol>
+  Push notification payload that need to be handled:<br/>
+
+  <code>
+<pre>
+{
+  "type": "WEB_LOGIN_REQUEST", 
+  "requestingAppId": "APP_ID"
+}</pre>
+  </code>
+
+
   </section>
 
   <hr>
@@ -292,7 +338,7 @@ To generate database on Windows maybe you can run <code>setx NODE_ENV=DATABASE &
 Copyright 2019-2020 Bluenumber Foundation
 Licensed under the GNU General Public License v3.0 <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/blob/master/LICENSE">(LICENSE)</a>
 
-</section>      -->
+</section>     
       </main>
     </div>
 
