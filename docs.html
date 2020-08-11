@@ -81,7 +81,7 @@
                   Class/Entity Relationship Diagram
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#fifth_section">
                   <span data-feather="layers"></span>
                   Configuration
@@ -98,7 +98,7 @@
                   <span data-feather="layers"></span>
                   License
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -209,15 +209,42 @@ To generate database on Windows maybe you can run <code>setx NODE_ENV=DATABASE &
 }</pre>
           </code>
 
+          <b>SMS OTP/Verification</b><br/>
+          To enable phone number verification SMS using <a target="_blank" href="https://www.vonage.com/communications-apis/sms/">Nexmo</a> please provide valid configuration like below (replace values with your own account details):
+
+          <code>
+<pre>
+{
+  "NEXMO_REST_URL": "https://rest.nexmo.com",
+  "NEXMO_API_KEY": "abcd1234",
+  "NEXMO_API_SECRET": "abcdefgh12345678",
+}</pre>
+          </code>
+
+          <p class="text-muted"> If one or more value are missing, no verification SMS will be triggered and verification code is not validated (always considered valid)</p>
           
+          <b>Push Notification</b><br/>
+          To enable push notification using <a target="_blank" href="https://firebase.google.com/docs/admin/setup?authuser=0#initialize_the_sdk">Firebase Cloud Messaging</a>, provide valid like below (replace values with your own account details):
+        
+        <code>
+<pre>
+{
+  "FIREBASE_SERVER_KEY": "AAAAVo...BmFpE",
+}</pre>
+        </code>
+
+        <p class="text-muted">Currently this is only used for IOS. For Android, serverKey for each apps are used</p>
 
         </section>
         <hr>
               <section class="main-section" id="fourth_section">
         <header>Class/Entity Relationship Diagram</header>
-        Get the clientId and clientSecret by dropping us an email <br/><a href="mailto:developers@human-id.org">developers@human-id.org</a>
+        The API server stores data in given structure:
+        <p class="text-muted">SequelizeMeta is just ORM migration metadata which is not related to business process</p>
+        <img width="100%" src="https://cdn.glitch.com/c0dcb651-5b19-4756-a6e6-25b3982ca367%2Ferd.png?v=1597163286762" alt="ERD Diagram"/>
         </section>
-        <hr>
+
+        <!-- <hr>
               <section class="main-section" id="fifth_section">
         <header>Configuration</header>
         Add these codes into your <code>AppDelegate.swift</code> and make sure all value is fulfilled.
@@ -265,7 +292,7 @@ To generate database on Windows maybe you can run <code>setx NODE_ENV=DATABASE &
 Copyright 2019-2020 Bluenumber Foundation
 Licensed under the GNU General Public License v3.0 <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/blob/master/LICENSE">(LICENSE)</a>
 
-</section>     
+</section>      -->
       </main>
     </div>
 
