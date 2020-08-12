@@ -169,8 +169,8 @@ a:hover {
   }
   
 
-  @media only screen and (max-width: 768px) {
+  /* @media only screen and (max-width: 768px) {
     .sidebar {
       position: relative !important;
     }
-  }
+  } */
