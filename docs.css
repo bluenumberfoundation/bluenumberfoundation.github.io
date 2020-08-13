@@ -91,8 +91,8 @@ a:hover {
 #main {
       padding-top: 1.5rem;
       margin-left: 20rem;
-      width: calc(100% - 280px);
-      max-width: calc(100% - 280px);
+      /* width: calc(100% - 280px);
+      max-width: calc(100% - 280px); */
   }
   
 
@@ -169,8 +169,6 @@ a:hover {
   }
   
 
-  /* @media only screen and (max-width: 768px) {
-    .sidebar {
-      position: relative !important;
-    }
-  } */
+  .container {
+    width: 100% !important;
+  }
