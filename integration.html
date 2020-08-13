@@ -9,189 +9,274 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./integration.css">
+    <link rel="stylesheet" href="./faq.css">
     <title>humanID</title>  
   
 </head>
 <body>
-  <div class="navbar-fixed">
-    <nav class="nav-wrapper">
-      <div class="container">
-          <a href="#" class="brand-logo" id="logo"><img width="130px" src="https://cdn.glitch.com/e7ec1ecc-8235-4381-8966-9202576ad0f6%2FhumanID%20logo%20blue_horizontal_without%20tagline%20PNG.png?v=1596925016295"></a>
-          <a href="#" class="sidenav-trigger" data-target="mobile-links">
-              <i class="material-icons">menu</i>
-          </a>
-          <ul class="right hide-on-med-and-down">
-            <li class="myNav"><a href="index.html">Home</a></li>
-            <li class="myNav"><a href="docs.html">Docs</a></li>
-            <li class="myNav"><a href="integration.html">Integration</a></li> 
-            <li class="myNav"><a href="blog.html">Blog</a></li> 
-            <li class="myNav"><a href="faq.html">FAQ</a></li> 
-          </ul>
-      </div>
-  </nav>
-</div>
-  <ul class="sidenav" id="mobile-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="docs.html">Docs</a></li>
-    <li><a href="integration.html">Integration</a></li> 
-    <li><a href="blog.html">Blog</a></li> 
-    <li><a href="faq.html">FAQ</a></li> 
-  </ul>
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper">
+          <div class="container">
+              <a href="#" class="brand-logo" id="logo"><img width="130px" src="https://cdn.glitch.com/e7ec1ecc-8235-4381-8966-9202576ad0f6%2FhumanID%20logo%20blue_horizontal_without%20tagline%20PNG.png?v=1596925016295"></a>
+              <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                  <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li class="myNav"><a href="index.html">Home</a></li>
+                <li class="myNav"><a href="docs.html">Docs</a></li>
+                <li class="myNav"><a href="integration.html">Integration</a></li> 
+                <li class="myNav"><a href="blog.html">Blog</a></li> 
+                <li class="myNav"><a href="faq.html">FAQ</a></li> 
+              </ul>
+          </div>
+      </nav>
+    </div>
+      <ul class="sidenav" id="mobile-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="integration.html">Integration</a></li> 
+        <li><a href="blog.html">Blog</a></li> 
+        <li><a href="faq.html">FAQ</a></li> 
+    </ul>
 
  
   
-        <div class="container"> 
-            <nav id="sidebar" class="col-md-2 d-block bg-light sidebar">
-              <div class="sidebar-sticky">
-                <div class="sidebar-content">        
-                  <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#">
-                        <span data-feather="home"></span>
-                        Integration <span class="sr-only">(current)</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#first_section">
-                        <span data-feather="file"></span>
-                        Requirements
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#second_section"> 
-                        <span data-feather="shopping-cart"></span>
-                        Built with
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#third_section">
-                        <span data-feather="users"></span>
-                        Installation
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#fourth_section">
-                        <span data-feather="bar-chart-2"></span>
-                        Get the credentials access
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#fifth_section">
-                        <span data-feather="layers"></span>
-                        Configuration
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#sixth_section">
-                        <span data-feather="layers"></span>
-                        How do I use iOS SDK
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#seventh_section">
-                        <span data-feather="layers"></span>
-                        License
-                      </a>
-                    </li>
-                  </ul>
+  <div class="container">
+    <div class="row mt-4">
+        <div class="col-lg-4 pt-2">
+            <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+                <a href="#tab1" class="nav-link active" data-toggle="pill" role="tab" aria-controls="tab1" aria-selected="true">
+                    <i class="mdi mdi-help-circle"></i> Integration
+                </a>
+                <a href="#tab2" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab2" aria-selected="false">
+                    <i class="mdi mdi-account"></i> Requirements
+                </a>
+                <a href="#tab3" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab3" aria-selected="false">
+                    <i class="mdi mdi-account-settings"></i> Built with
+                </a>
+                <a href="#tab4" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab4" aria-selected="false">
+                    <i class="mdi mdi-heart"></i> Installation
+                </a>
+                <a href="#tab5" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab5" aria-selected="false">
+                    <i class="mdi mdi-coin"></i> Get the credentials access
+                </a>
+                <a href="#tab6" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6" aria-selected="false">
+                    <i class="mdi mdi-help"></i> Configuration
+                </a> 
+
+                <a href="#tab7" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab7" aria-selected="false">
+                    <i class="mdi mdi-help"></i> How do I use iOS SDK
+                </a> 
+
+                <a href="#tab8" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab8" aria-selected="false">
+                    <i class="mdi mdi-help"></i> License
+                </a> 
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="tab-content" id="faq-tab-content">
+                <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1">
+                    <div class="accordion" id="accordion-tab-1">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-1-heading-1">
+                                <h6>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-1" aria-expanded="false" aria-controls="accordion-tab-1-content-1">Integration</div>
+                                </h6>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-1-content-1" aria-labelledby="accordion-tab-1-heading-1" data-parent="#accordion-tab-1">
+                                <div class="card-body">
+                                    <p>To receive the needed credentials to integrate humanID login into your own applications, please email developers@human-id.org. Once you receive your credentials, follow the instructions on our README page to finish integration.</p>
+                                
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </nav>
-        
-            <main id="main" class="col-md-10">
 
-              <div>
-                <h6 id="title">Integration</h6>
-                To receive the needed credentials to integrate humanID login into your own applications, please email developers@human-id.org. Once you receive your credentials, follow the instructions on our README page to finish integration.
-              </div>
-              <hr>
-              <section class="main-section" id="first_section">
-              <header>Requirements</header>
-                  <li>Xcode 11.4+</li>
-                  <li>Swift 5.0</li>
-                  <li>iOS 11.0+</li>
-                  <li><a target="_blank" href="https://clean-swift.com/">Clean Swift</a> VIP architecture</li>
-              </section>
 
-              <hr>
-              <section class="main-section" id="second_section">
-              <header>Built with</header>
-              <li><a target="_blank" href="https://github.com/Swinject/Swinject">Swinject</a> - Dependency injection framework for Swift with iOS/macOS/Linux</li>
-              <li><a target="_blank" href="https://github.com/ReactiveX/RxSwift">RxSwift</a> - Reactive Programming in Swift</li>
-              <li><a target="_blank" href="https://github.com/RxSwiftCommunity/RxAlamofire">RxAlamofire</a> - RxSwift wrapper around the elegant HTTP networking in Swift Alamofire</li>
-              <li><a target="_blank" href="https://github.com/chronotruck/FlagPhoneNumber">FlagPhoneNumber</a> - A formatted phone number UITextField with country flag picker</li>
-              <li><a target="_blank" href="https://github.com/Sunspension/VKPinCodeView">VKPinCodeView</a> - VKPinCodeView is simple and elegant UI component for input PIN. You can easily customise appearance and get auto fill (OTP) iOS 12 feature right from the box</li>
-              <li><a target="_blank" href="https://github.com/hackiftekhar/IQKeyboardManager">IQKeyboardManager</a> - Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more</li>
-              <li><a target="_blank" href="https://github.com/haifengkao/PodAsset">PodAsset</a> - Unable to find cocoapods resources? Here is the solution!</li>
-              </section>
-              <hr>
-                    <section class="main-section" id="third_section">
-              <header>Installation</header>
-                HumanIDSDK is available through <a target="_blank" href="https://cocoapods.org/">CocoaPods</a>
-                  To install it, simply add the following line to your Podfile:<br/><br/>
-                  <code>pod 'HumanIDSDK'</code>
 
-              </section>
-              <hr>
-                    <section class="main-section" id="fourth_section">
-              <header>Get the credentials access</header>
-              Get the clientId and clientSecret by dropping us an email <br/><a href="mailto:developers@human-id.org">developers@human-id.org</a>
-              </section>
-              <hr>
-                    <section class="main-section" id="fifth_section">
-              <header>Configuration</header>
-              Add these codes into your <code>AppDelegate.swift</code> and make sure all value is fulfilled.
-                <code>
+                <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2">
+                    <div class="accordion" id="accordion-tab-2">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-2-heading-1">
+                                <h6>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-1" aria-expanded="false" aria-controls="accordion-tab-2-content-1">Requirements</div>
+                                </h6>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-2-content-1" aria-labelledby="accordion-tab-2-heading-1" data-parent="#accordion-tab-2">
+                                <div class="card-body">
+                                    <li>Xcode 11.4+</li>
+                                    <li>Swift 5.0</li>
+                                    <li>iOS 11.0+</li>
+                                    <li><a target="_blank" href="https://clean-swift.com/">Clean Swift</a> VIP architecture</li>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3">
+                    <div class="accordion" id="accordion-tab-3">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-3-heading-1">
+                                <h6>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-1" aria-expanded="false" aria-controls="accordion-tab-3-content-1">Built with</div>
+                                </h6>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-3-content-1" aria-labelledby="accordion-tab-3-heading-1" data-parent="#accordion-tab-3">
+                                <div class="card-body">
+                                    <li><a target="_blank" href="https://github.com/Swinject/Swinject">Swinject</a> - Dependency injection framework for Swift with iOS/macOS/Linux</li>
+                                    <li><a target="_blank" href="https://github.com/ReactiveX/RxSwift">RxSwift</a> - Reactive Programming in Swift</li>
+                                    <li><a target="_blank" href="https://github.com/RxSwiftCommunity/RxAlamofire">RxAlamofire</a> - RxSwift wrapper around the elegant HTTP networking in Swift Alamofire</li>
+                                    <li><a target="_blank" href="https://github.com/chronotruck/FlagPhoneNumber">FlagPhoneNumber</a> - A formatted phone number UITextField with country flag picker</li>
+                                    <li><a target="_blank" href="https://github.com/Sunspension/VKPinCodeView">VKPinCodeView</a> - VKPinCodeView is simple and elegant UI component for input PIN. You can easily customise appearance and get auto fill (OTP) iOS 12 feature right from the box</li>
+                                    <li><a target="_blank" href="https://github.com/hackiftekhar/IQKeyboardManager">IQKeyboardManager</a> - Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more</li>
+                                    <li><a target="_blank" href="https://github.com/haifengkao/PodAsset">PodAsset</a> - Unable to find cocoapods resources? Here is the solution!</li>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                 <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4">
+                    <div class="accordion" id="accordion-tab-4">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-4-heading-1">
+                                <h5>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-1" aria-expanded="false" aria-controls="accordion-tab-4-content-1">Installation</div>
+                                </h5>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-4-content-1" aria-labelledby="accordion-tab-4-heading-1" data-parent="#accordion-tab-4">
+                                <div class="card-body">
+                                    HumanIDSDK is available through <a target="_blank" href="https://cocoapods.org/">CocoaPods</a>
+                                    To install it, simply add the following line to your Podfile:<br/><br/>
+                                    <code>pod 'HumanIDSDK'</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tab-pane" id="tab5" role="tabpanel" aria-labelledby="tab5">
+                    <div class="accordion" id="accordion-tab-5">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-5-heading-1">
+                                <h5>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-5-content-1" aria-expanded="false" aria-controls="accordion-tab-5-content-1">Get the credentials access</div>
+                                </h5>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-5-content-1" aria-labelledby="accordion-tab-5-heading-1" data-parent="#accordion-tab-5">
+                                <div class="card-body">
+                                    Get the clientId and clientSecret by dropping us an email <br/><a href="mailto:developers@human-id.org">developers@human-id.org</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab6" role="tabpanel" aria-labelledby="tab6">
+                    <div class="accordion" id="accordion-tab-6">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-6-heading-1">
+                                <h5>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-6-content-1" aria-expanded="false" aria-controls="accordion-tab-6-content-1">Configuration</div>
+                                </h5>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-6-content-1" aria-labelledby="accordion-tab-6-heading-1" data-parent="#accordion-tab-6">
+                                <div class="card-body">
+                                    Add these codes into your <code>AppDelegate.swift</code> and make sure all value is fulfilled.
+<code>
 <pre>                
 import HumanIDSDK
-
+                    
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {           
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-  HumanIDSDK.shared.configure(clientID: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")
-  }
+    HumanIDSDK.shared.configure(clientID: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")
+    }
 }</pre>
-                </code>
-              </section>
+</code>
 
-              <hr>
-              <section class="main-section" id="sixth_section">
-        <header>How do I use iOS SDK</header>
-        Add these codes into your ViewController file, we recommend you wrap this in a function that handles the login button.
-          <code>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div> 
+
+
+                <div class="tab-pane" id="tab7" role="tabpanel" aria-labelledby="tab7">
+                    <div class="accordion" id="accordion-tab-7">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-7-heading-1">
+                                <h5>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-7-content-1" aria-expanded="false" aria-controls="accordion-tab-7-content-1">How do I use iOS SDK</div>
+                                </h5>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-7-content-1" aria-labelledby="accordion-tab-7-heading-1" data-parent="#accordion-tab-7">
+                                <div class="card-body">
+
+                                    Add these codes into your ViewController file, we recommend you wrap this in a function that handles the login button.
+<code>
 <pre>
 import HumanIDSDK
-
+                          
 class YourViewController: UIViewController {        
-  @IBAction func yourLoginAction(_ sender: Any) {
-    HumanIDSDK.shared.requestOtp(view: self, name: "YOUR_APPLICATION_NAME", image: "YOUR_APPLICATION_LOGO")
-  }
+    @IBAction func yourLoginAction(_ sender: Any) {
+        HumanIDSDK.shared.requestOtp(view: self, name: "YOUR_APPLICATION_NAME", image: "YOUR_APPLICATION_LOGO")
+    }
 }
-            
+                                      
 extension YourViewController: RequestOTPDelegate {      
-  func login(with token: String) {
-    // TODO You can persist our token here.
-  }
+    func login(with token: String) {
+        // TODO You can persist our token here.
+    }
 }</pre>
 </code> 
-          <strong>You are set!</strong><br/>
-          Now you can integrate your iOS app to humanID. See the full <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/tree/master/Example">sample</a> here to learn more.
+                                    <strong>You are set!</strong><br/>
+                                    Now you can integrate your iOS app to humanID. See the full <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/tree/master/Example">sample</a> here to learn more.
+                          
+                                    Warning! To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.
 
-          Warning! To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.
-        </section>
 
-        <hr>
-        <section class="main-section" id="seventh_section">
-  <header>License</header>
-      Copyright 2019-2020 Bluenumber Foundation
-      Licensed under the GNU General Public License v3.0 <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/blob/master/LICENSE">(LICENSE)</a>
-  
-  </section>     
-            </main>
-        
+                                </div>
+                            </div>
+                        </div>
 
+
+                    </div>
+                </div> 
+
+
+                <div class="tab-pane" id="tab8" role="tabpanel" aria-labelledby="tab8">
+                    <div class="accordion" id="accordion-tab-8">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-8-heading-1">
+                                <h5>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-8-content-1" aria-expanded="false" aria-controls="accordion-tab-8-content-1">License</div>
+                                </h5>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-8-content-1" aria-labelledby="accordion-tab-8-heading-1" data-parent="#accordion-tab-8">
+                                <div class="card-body">
+                                    Copyright 2019-2020 Bluenumber Foundation
+                                    Licensed under the GNU General Public License v3.0 <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/blob/master/LICENSE">(LICENSE)</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
         </div>
+    </div>
+</div>
 
      
    

@@ -9,103 +9,83 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./docs.css">
-    
+    <link rel="stylesheet" href="./faq.css">
     <title>humanID</title>  
   
 </head>
 <body>
-  <div class="navbar-fixed">
-    <nav class="nav-wrapper #000000 black">
-      <div class="container">
-          <a href="#" class="brand-logo" id="logo"><img width="130px" src="https://cdn.glitch.com/e7ec1ecc-8235-4381-8966-9202576ad0f6%2FhumanID%20logo%20blue_horizontal_without%20tagline%20PNG.png?v=1596925016295"></a>
-          <a href="#" class="sidenav-trigger" data-target="mobile-links">
-              <i class="material-icons">menu</i>
-          </a>
-          <ul class="right hide-on-med-and-down">
-            <li class="myNav"><a href="index.html">Home</a></li>
-            <li class="myNav"><a href="docs.html">Docs</a></li>
-            <li class="myNav"><a href="integration.html">Integration</a></li> 
-            <li class="myNav"><a href="blog.html">Blog</a></li> 
-            <li class="myNav"><a href="faq.html">FAQ</a></li> 
-          </ul>
-      </div>
-  </nav>
-</div>
-  <ul class="sidenav" id="mobile-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="docs.html">Docs</a></li>
-    <li><a href="integration.html">Integration</a></li> 
-    <li><a href="blog.html">Blog</a></li> 
-    <li><a href="faq.html">FAQ</a></li> 
-  </ul>
-
- 
-  <div class="container"> 
-      <nav id="sidebar" class="col-md-2 d-block bg-light sidebar">
-        <div class="sidebar-sticky">
-          <div class="sidebar-content">  
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  <span data-feather="home"></span>
-                  humanID Core API <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#first_section">
-                  <span data-feather="file"></span>
-                  Prerequisites
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#second_section"> 
-                  <span data-feather="shopping-cart"></span>
-                  Setup
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#third_section">
-                  <span data-feather="users"></span>
-                  Configuration
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#fourth_section">
-                  <span data-feather="bar-chart-2"></span>
-                  Class/Entity Relationship Diagram
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#fifth_section">
-                  <span data-feather="layers"></span>
-                  Web Login Examples
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#sixth_section">
-                  <span data-feather="layers"></span>
-                  Mobile API Recipes
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#seventh_section">
-                  <span data-feather="layers"></span>
-                  License
-                </a>
-              </li>
-            </ul>
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper #000000 black">
+          <div class="container">
+              <a href="#" class="brand-logo" id="logo"><img width="130px" src="https://cdn.glitch.com/e7ec1ecc-8235-4381-8966-9202576ad0f6%2FhumanID%20logo%20blue_horizontal_without%20tagline%20PNG.png?v=1596925016295"></a>
+              <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                  <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li class="myNav"><a href="index.html">Home</a></li>
+                <li class="myNav"><a href="docs.html">Docs</a></li>
+                <li class="myNav"><a href="integration.html">Integration</a></li> 
+                <li class="myNav"><a href="blog.html">Blog</a></li> 
+                <li class="myNav"><a href="faq.html">FAQ</a></li> 
+              </ul>
           </div>
-        </div>
       </nav>
+    </div>
+      <ul class="sidenav" id="mobile-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="integration.html">Integration</a></li> 
+        <li><a href="blog.html">Blog</a></li> 
+        <li><a href="faq.html">FAQ</a></li> 
+      </ul> 
+
  
   
+  <div class="container">
+    <div class="row mt-4">
+        <div class="col-lg-4 pt-2">
+            <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+                <a href="#tab1" class="nav-link active" data-toggle="pill" role="tab" aria-controls="tab1" aria-selected="true">
+                    <i class="mdi mdi-help-circle"></i> humanID Core API
+                </a>
+                <a href="#tab2" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab2" aria-selected="false">
+                    <i class="mdi mdi-account"></i> Prerequisites
+                </a>
+                <a href="#tab3" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab3" aria-selected="false">
+                    <i class="mdi mdi-account-settings"></i> Setup
+                </a>
+                <a href="#tab4" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab4" aria-selected="false">
+                    <i class="mdi mdi-heart"></i> Configuration
+                </a>
+                <a href="#tab5" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab5" aria-selected="false">
+                    <i class="mdi mdi-coin"></i> Class/Entity Relationship Diagram
+                </a>
+                <a href="#tab6" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6" aria-selected="false">
+                    <i class="mdi mdi-help"></i> Web Login Examples
+                </a> 
 
-      <main id="main" class="col-md-10">
+                <a href="#tab7" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab7" aria-selected="false">
+                    <i class="mdi mdi-help"></i> Mobile API Recipes
+                </a> 
 
-        <div>
-          <h6 id="title">humanID Core API</h6>
-          humanID API server. API doc and demo <a target="_blank" href="https://humanid.herokuapp.com">https://humanid.herokuapp.com</a><br/>
+                <a href="#tab8" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab8" aria-selected="false">
+                    <i class="mdi mdi-help"></i> License
+                </a> 
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="tab-content" id="faq-tab-content">
+                <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1">
+                    <div class="accordion" id="accordion-tab-1">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-1-heading-1">
+                                <h6>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-1" aria-expanded="false" aria-controls="accordion-tab-1-content-1">humanID Core API</div>
+                                </h6>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-1-content-1" aria-labelledby="accordion-tab-1-heading-1" data-parent="#accordion-tab-1">
+                                <div class="card-body">
+                                          humanID API server. API doc and demo <a target="_blank" href="https://humanid.herokuapp.com">https://humanid.herokuapp.com</a><br/>
 
           Details about humanID Web SDK can be found <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-api/blob/master/client/README.md">here</a><br/>
           
@@ -147,28 +127,66 @@
 }
 </pre>
       </code>
-        </div>
-        <hr>
-        <section class="main-section" id="first_section">
-        <header>Prerequisites</header>
-            <li>Node.js >= 12 LTS</li>
-            <li>RDBMS (MySQL >= 14.14 or SQLite3 >= 3.22)</li>
-        </section>
+                                
 
-        <hr>
-        <section class="main-section" id="second_section">
-        <header>Setup</header>
-        <li>Install <code>nodejs >= 10.x.x</code></li>
-        <li>Clone repo & install dependencies <code>npm i</code></li>
-        <li>Run test <code>npm test</code></li>
-        <li>Generate database (drop & create) by running on Linux/MacOS<code>npm run db:refresh</code></li>
-        <li>Generate doc (requires apidoc <a target="_blank" href="http://apidocjs.com">http://apidocjs.com</a>)<code>npm run doc</code></li>
-        <li>Build client SDK (javascript) <code>npm run build</code></li>
-To generate database on Windows maybe you can run <code>setx NODE_ENV=DATABASE && npx sequelize db:drop && sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all</code> (UNTESTED)
-        </section>
-        <hr>
-              <section class="main-section" id="third_section">
-        <header>Configuration</header>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2">
+                    <div class="accordion" id="accordion-tab-2">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-2-heading-1">
+                                <h6>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-1" aria-expanded="false" aria-controls="accordion-tab-2-content-1">Prerequisites</div>
+                                </h6>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-2-content-1" aria-labelledby="accordion-tab-2-heading-1" data-parent="#accordion-tab-2">
+                                <div class="card-body">
+                                    <li>Node.js >= 12 LTS</li>
+                                    <li>RDBMS (MySQL >= 14.14 or SQLite3 >= 3.22)</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3">
+                    <div class="accordion" id="accordion-tab-3">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-3-heading-1">
+                                <h6>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-1" aria-expanded="false" aria-controls="accordion-tab-3-content-1">Setup</div>
+                                </h6>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-3-content-1" aria-labelledby="accordion-tab-3-heading-1" data-parent="#accordion-tab-3">
+                                <div class="card-body">
+                                    <li>Install <code>nodejs >= 10.x.x</code></li>
+                                    <li>Clone repo & install dependencies <code>npm i</code></li>
+                                    <li>Run test <code>npm test</code></li>
+                                    <li>Generate database (drop & create) by running on Linux/MacOS<br/><code> npm run db:refresh</code></li>
+                                    <li>Generate doc (requires apidoc <a target="_blank" href="http://apidocjs.com">http://apidocjs.com</a>)<code> npm run doc</code></li>
+                                    <li>Build client SDK (javascript) <code> npm run build</code></li>
+                            To generate database on Windows maybe you can run<br/> <code>setx NODE_ENV=DATABASE && npx sequelize db:drop && sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all</code> (UNTESTED)
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                 <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4">
+                    <div class="accordion" id="accordion-tab-4">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-4-heading-1">
+                                <h5>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-1" aria-expanded="false" aria-controls="accordion-tab-4-content-1">Configuration</div>
+                                </h5>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-4-content-1" aria-labelledby="accordion-tab-4-heading-1" data-parent="#accordion-tab-4">
+                                <div class="card-body">
         App configuration is read from config.json. You can reuse the provided example in config.json.example<br/><br/>
           <b>Database</b><br/>
           For DATABASE configuration, please refer to <a target="_blank" href="https://sequelize.org/master/manual/getting-started">Sequelize configuration</a>. Some common examples:<br/><br/>
@@ -231,47 +249,81 @@ To generate database on Windows maybe you can run <code>setx NODE_ENV=DATABASE &
         </code>
 
         <p class="text-muted">Currently this is only used for IOS. For Android, serverKey for each apps are used</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tab-pane" id="tab5" role="tabpanel" aria-labelledby="tab5">
+                    <div class="accordion" id="accordion-tab-5">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-5-heading-1">
+                                <h5>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-5-content-1" aria-expanded="false" aria-controls="accordion-tab-5-content-1">Class/Entity Relationship Diagram</div>
+                                </h5>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-5-content-1" aria-labelledby="accordion-tab-5-heading-1" data-parent="#accordion-tab-5">
+                                <div class="card-body">
+                                    The API server stores data in given structure:
+                                    <p class="text-muted">SequelizeMeta is just ORM migration metadata which is not related to business process</p>
+                                    <img width="100%" src="https://cdn.glitch.com/c0dcb651-5b19-4756-a6e6-25b3982ca367%2Ferd.png?v=1597163286762" alt="ERD Diagram"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab6" role="tabpanel" aria-labelledby="tab6">
+                    <div class="accordion" id="accordion-tab-6">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-6-heading-1">
+                                <h5>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-6-content-1" aria-expanded="false" aria-controls="accordion-tab-6-content-1">Web Login Examples</div>
+                                </h5>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-6-content-1" aria-labelledby="accordion-tab-6-heading-1" data-parent="#accordion-tab-6">
+                                <div class="card-body">
+                                    Web login implementation example can be found in 
+                                    <code>http://localhost:3000/examples/login.html</code>
+                                    
+                                   
+                                    To simulate web login with push notification, follow these steps:
+                                   <ol> 
+                                   <li>Make sure Push Notification configuration above has been done</li>
+                                   <li>Open in a tab http://localhost:3000/examples/confirm.html and allow notification. Leave it open</li>
+                                   <li>Open in another tab http://localhost:3000/examples/login.html enter country code & phone number (demo data provided above) and click Login by App</li>
+                                   <li>Go to previous tab that points to http://localhost:3000/examples/confirm.html. A confirmation dialog should be shown. Click Confirm</li>
+                                   <li>Return to tab http://localhost:3000/examples/login.html. In less than 5 seconds, you should be redirected to http://localhost:3000/examples/secured.html</li>
+                                  </ol>
+                            
+                                  <p class="text-muted">In the actual implementation, every actions in confirm.html can only be done from mobile device. Because it requires login hash which should be kept secret per user/app.</p><br/>
+                                    
+                                  To simulate web login with OTP SMS, follow these steps:
+                                  <ol>
+                                    <li>Make sure SMS OTP/Verification above has been done, and you have register a valid phone number using POST /mobile/users/register</li>
+                                    <li>Open http://localhost:3000/examples/login.html enter country code & phone number (demo data provided above) and click Login by SMS</li>
+                                    <li>Wait for SMS containing OTP, enter it to the form, then click Verify & Login</li>
+                                    <li>You should be redirected to http://localhost:3000/examples/secured.html</li>
+                                  </ol>
+                                </div>
+                            </div>
+                        </div>
 
-        </section>
-        <hr>
-              <section class="main-section" id="fourth_section">
-        <header>Class/Entity Relationship Diagram</header>
-        The API server stores data in given structure:
-        <p class="text-muted">SequelizeMeta is just ORM migration metadata which is not related to business process</p>
-        <img width="100%" src="https://cdn.glitch.com/c0dcb651-5b19-4756-a6e6-25b3982ca367%2Ferd.png?v=1597163286762" alt="ERD Diagram"/>
-        </section>
 
-        <hr>
-              <section class="main-section" id="fifth_section">
-        <header>Web Login Examples</header>
-        Web login implementation example can be found in 
-        <code>http://localhost:3000/examples/login.html</code>
-        
-       
-        To simulate web login with push notification, follow these steps:
-       <ol> 
-       <li>Make sure Push Notification configuration above has been done</li>
-       <li>Open in a tab http://localhost:3000/examples/confirm.html and allow notification. Leave it open</li>
-       <li>Open in another tab http://localhost:3000/examples/login.html enter country code & phone number (demo data provided above) and click Login by App</li>
-       <li>Go to previous tab that points to http://localhost:3000/examples/confirm.html. A confirmation dialog should be shown. Click Confirm</li>
-       <li>Return to tab http://localhost:3000/examples/login.html. In less than 5 seconds, you should be redirected to http://localhost:3000/examples/secured.html</li>
-      </ol>
+                    </div>
+                </div> 
 
-      <p class="text-muted">In the actual implementation, every actions in confirm.html can only be done from mobile device. Because it requires login hash which should be kept secret per user/app.</p>
-        
-      To simulate web login with OTP SMS, follow these steps:
-      <ol>
-        <li>Make sure SMS OTP/Verification above has been done, and you have register a valid phone number using POST /mobile/users/register</li>
-        <li>Open http://localhost:3000/examples/login.html enter country code & phone number (demo data provided above) and click Login by SMS</li>
-        <li>Wait for SMS containing OTP, enter it to the form, then click Verify & Login</li>
-        <li>You should be redirected to http://localhost:3000/examples/secured.html</li>
-      </ol>
-    
-    </section>
 
-        <hr>
-        <section class="main-section" id="sixth_section">
-  <header>Mobile API Recipes</header>
+                <div class="tab-pane" id="tab7" role="tabpanel" aria-labelledby="tab7">
+                    <div class="accordion" id="accordion-tab-7">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-7-heading-1">
+                                <h5>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-7-content-1" aria-expanded="false" aria-controls="accordion-tab-7-content-1">Mobile API Recipes</div>
+                                </h5>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-7-content-1" aria-labelledby="accordion-tab-7-heading-1" data-parent="#accordion-tab-7">
+                                <div class="card-body">
+
   <b>Registration</b><br/>
   Fresh login (no other partner app logged-in yet):
   <ol>
@@ -327,17 +379,46 @@ To generate database on Windows maybe you can run <code>setx NODE_ENV=DATABASE &
   </code>
 
 
-  </section>
 
-  <hr>
-  <section class="main-section" id="seventh_section">
-<header>License</header>
-Copyright 2019-2020 Bluenumber Foundation
-Licensed under the GNU General Public License v3.0 <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/blob/master/LICENSE">(LICENSE)</a>
 
-</section>     
-      </main>
-  </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div> 
+
+
+                <div class="tab-pane" id="tab8" role="tabpanel" aria-labelledby="tab8">
+                    <div class="accordion" id="accordion-tab-8">
+                        <div class="card">
+                            <div class="card-header" id="accordion-tab-8-heading-1">
+                                <h5>
+                                    <div type="button" data-toggle="collapse" data-target="#accordion-tab-8-content-1" aria-expanded="false" aria-controls="accordion-tab-8-content-1">License</div>
+                                </h5>
+                            </div>
+                            <div class="collapse show" id="accordion-tab-8-content-1" aria-labelledby="accordion-tab-8-heading-1" data-parent="#accordion-tab-8">
+                                <div class="card-body">
+                                    Copyright 2019-2020 Bluenumber Foundation
+                                    Licensed under the GNU General Public License v3.0 <a target="_blank" href="https://github.com/bluenumberfoundation/humanid-ios-sdk/blob/master/LICENSE">(LICENSE)</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
 
      
    
