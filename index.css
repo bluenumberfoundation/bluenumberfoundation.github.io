@@ -1,0 +1,11 @@
+ p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  
+  .sec-services h2,
+  .sec-services p {
+    font-weight: 300;
+    text-align: center;
+  }
