@@ -72,8 +72,37 @@ ul.social-network li {
   background-color: #007bb7;
 }
 
+
+
+.social-network a.icoTwitter:hover {
+  background-color: #55acee;
+}
+
+
+.social-network a.icoGitHub:hover {
+  background-color: #333;
+}
+
+.social-network a.icoWhatsapp:hover {
+  background-color: #4AC959;
+}
+
+
+.social-network a.icoMedium:hover {
+  background-color: rgba(0,0,0,.84);
+}
+
+.social-network a.icoPodcast:hover {
+  background-color: rgb(2, 59, 96);
+}
+
 .social-network a.icoFacebook:hover i,
-.social-network a.icoLinkedin:hover i {
+.social-network a.icoLinkedin:hover i,
+.social-network a.icoTwitter:hover i,
+.social-network a.icoGitHub:hover i,
+.social-network a.icoWhatsapp:hover i,
+.social-network a.icoMedium:hover i,
+.social-network a.icoPodcast:hover i {
   color: #fff;
 }
 
