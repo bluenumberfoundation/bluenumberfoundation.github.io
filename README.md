@@ -7,14 +7,6 @@
 ## Description
 Build humanID’s GitHub documentation
 
-
-## Table of Contents
-
-* [Tech/Framework Used](#TechUsed)
-
-* [link](#Link)
-
-
 ## TechUsed
 JavaScript, HTML, CSS
 
