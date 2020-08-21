@@ -14,8 +14,6 @@ Build humanID’s GitHub documentation
 
 * [link](#Link)
 
-* [Questions](#Questions)
-
 
 ## TechUsed
 JavaScript, HTML, CSS
@@ -23,6 +21,5 @@ JavaScript, HTML, CSS
 ## Link
 https://bluenumberfoundation.github.io
 
-## Questions
-For questions about the project contact PhoebeYahengWu or directly at phoebe@human-id.org.
+
 
